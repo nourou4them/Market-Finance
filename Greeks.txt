@@ -1,0 +1,46 @@
+Les lettres grecques ou grecques ou grecs sont les instruments de base de la gestion financière des options. Elles découlent des principaux modèles d'évaluation d'option, notamment de celui de Black et Scholes.
+Ces indicateurs calculent l'impact sur le prix de l'option d'une variation des paramètres qui le forment :
+•	le prix du sous-jacent (ou spot)  , 
+•	la volatilité implicite  , 
+•	le temps  , 
+•	le taux d'intérêt (ou rate) . 
+Sommaire
+•	1 Définitions 
+o	1.1 Le delta 
+o	1.2 Le gamma 
+o	1.3 Le thêta 
+o	1.4 Le rhô 
+o	1.5 Le véga 
+
+Définitions [modifier]
+En reprenant les notations expliquées dans le Black et Scholes et en notant  la prime de l'option, on a les dérivées suivantes :
+Le delta [modifier]
+ 
+Il est le premier des indicateurs pris en compte par le trader. Il traduit la sensibilité de l'option aux variations du prix du sous-jacent (de combien le prix de l'option varie-t-il quand le prix du sous-jacent varie de une unité).
+δs
+Pour un call,  .
+Si un opérateur a acheté n calls de δ δr δv δd d, il devra vendre une quantité n * d de sous-jacents afin de s'immuniser à cet instant contre la variation du prix du sous-jacent.
+Cette stratégie est appelée "stratégie en delta neutre".
+Le delta d'une option mesure la sensibilité de son prix a une variation donnée du cours du sous-jacent
+Pour le call, le delta est nécessairement positif (au pire nul) : une option d'achat vaut d'autant plus cher que le cours du sous-jacent est élevé. Par ailleurs, le delta du call est nécessairement compris entre 0 et 1. Prenons en effet le cas extrême d'un call à prix d'exercice nul : il vaut en tout temps C = S, et par conséquent Delta(c)= 1. Si K n'est pas nul et qu'il est au contraire très élevé (K>S), le call sera moins sensible aux fluctuations du cours de l'action.
+Pour le put, le delta est nécessairement négatif (au pire nul) : une option de vente à un prix fixe vaut d'autant plus cher que le cours du sous-jascent est bas. Par un raisonnement symétrique au précédent on peut montrer que le delta du put est strictement compris entre -1 et 0.
+Couverture de portefeuille
+Le delta est également une mesure de la quantité de sous-jacent à détenir pour compenser les variations d'une option de vente (put) de parité 1. De manière plus générale, si un portefeuille composé du put et du sous-jacent vérifie la relation :
+(nombre de puts détenus en portefeuille) * delta = (nombre de sous-jacents détenus en portefeuille * parité du put),
+alors ses variations sont nulles. Ainsi, pour profiter de la hausse du sous-jacent, il est nécessaire de détenir plus de sous-jacent, alors que pour profiter d'une baisse, il faut détenir plus de puts.
+Le gamma [modifier]
+article principal:gamma
+ 
+Le gamma représente la convexité du prix d'une option en fonction du cours du sous-jacent. Il indique si le prix de l'option a tendance à évoluer plus ou moins vite que le prix du sous-jacent. Par analogie, on peut comparer le delta à la vitesse et le gamma à l'accélération.
+En pratique, celui-ci est très important, vu le comportement des acteurs en salle de marché : leur stratégie étant traditionnellement de se positionner en delta-neutre sur leur portefeuille (insensibilité au premier ordre), c'est donc principalement le gamma, et donc les fluctuations de grande amplitude du cours, qui vont être responsables de l'évolution d'un portefeuille.
+γ peut être vu comme une estimation de la fréquence de rebalancement d'un portefeuille delta-neutre. En effet, un γ élevé implique une forte sensibilité du δ par rapport au prix du sous-jacent. Le trader qui adopte une couverture dynamique delta-neutre sera donc amené à modifier sa position sur le sous-jacent de façon très fréquente, ce qui peut-être prohibitif si les coûts de transaction sont élevés. À l'inverse, si le gamma de l'option est nul, le trader peut conserver une position fixe tout au long de la durée de vie de l'option.
+Le thêta [modifier]
+ 
+Le thêta est le coût du temps qui passe sur un portefeuille d'options. Il évalue combien le passage du temps influe sur la valeur d'une option. Une position longue d'options (gamma positive) sera thêta negative. Le trader devra veiller tous les jours à payer son thêta journalier en profitant de sa position longue en gamma. On préfèrera donc être long d'une option qui soit suffisamment volatile, ainsi en rebalancant la position, on pourra payer le temps qui passe en tradant le gamma.
+Le rhô [modifier]
+ 
+Il est le taux de variation de la valeur du prime en fonction du taux d'intérêt.
+Le véga [modifier]
+ 
+Le véga mesure de la sensibilité à la volatilité implicite (voir Modèle Black-Scholes). Représenté par la lettre nu minuscule car le nom « véga » n'est pas lui-même un nom de lettre grecque. Contrairement au Gamma et au Theta, le Véga est une fonction croissante de la maturité. Ainsi, une augmentation parallèle de la volatilité aura plus d'impact sur les options longues que sur les options courtes. Une position généralement appreciée des traders / market makers est alors d'avoir une position globalement Gamma positive (sensible aux grands mouvements de marché) et Véga négative, qui consiste a acheter des options courtes et a vendre des options longues.
+
